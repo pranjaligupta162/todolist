@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ToDo List</title>
+	<script type="text/javascript" src="script.js"></script>
+	<style type="text/css">
+		.none{display: none;}
+		*{padding:0px;margin: 0px;box-sizing: border-box;font-family: sans-serif;}
+		body{background: #3FA0BD;}
+		.main-container{width: 100%;overflow: auto;margin-top: 45px;}
+		.main-container p{margin-top:10px; }
+		#frmDv{width: 60%;margin: 30px auto;}
+		.form{overflow: auto;}
+		.form input, .form button{width: 100%;line-height: 35px;border: none;border-radius: 5px;}
+		.inputDv{width: 92%;float: left;margin-right: 10px;}
+		.inputDv input{padding-left: 10px;}
+		.inputDv input:focus,.btnDv button:focus{outline: none;}
+		.btnDv{width: 6%;float: left;}
+		.btnDv button{background: #235F6E;cursor: pointer;font-size: 24px;color: #fff;}
+		.text-center{text-align: center;}
+		.text-uppercase{text-transform: uppercase;}
+		h2{color: white;font-size: 40px;font-weight: 700;margin: 25px 0px;}
+		.fs-18{font-size: 18px;}
+		.txt1{color: #ECC764;}
+		.txt2{color: #65D678;}
+		.txt3{color: #206285;}
+		.todo-list{margin-top: 25px;}
+		.tskDv{padding: 12px 10px;background: #4BB7CB;border: 2px solid #235F6E;border-radius: 5px;width: 90%;margin: 12px auto;}
+		.txt-todo{width: 94%;float: left;margin: 0px!important;cursor: pointer;}
+		.del-todo{background: unset;border: unset;padding: 2px 10px;cursor: pointer;}
+		.s-thru{text-decoration:line-through;}
+	</style>
+</head>
+<body>
+	<div class="main-container">
+		<div class="text-center">
+			<h2 class="text-uppercase">work to-dos</h2>
+			<p class="txt1 fs-18">Enter text into the input field to add items to your list.</p>
+			<p class="txt2 fs-18">Click the item to mark it as complete.</p>
+			<p class="txt3 fs-18">Click the "X" to remove the item from your list.</p>
+		</div>
+		<div class="" id="frmDv">
+			<form class="form"  onsubmit="return false">
+				<div class="inputDv"><input required id="todoInput" type="text" name="" placeholder="enter todo item" ></div>
+				<div class="btnDv"><button class="addTodo" onclick="addTodoFn()">+</button></div>
+			</form>
+			<div class="todo-list">
+		
+			</div>
+		</div>
+	</div>
+	
+
+	<div class="prtype none tskDv">
+		<p class="txt-todo" onclick="complTodoFn(this)"></p>
+		<button class="del-todo" onclick="delTodoFn(this)">X</button>
+	</div>
+	
+</body>
+</html>
